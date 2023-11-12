@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Xóa nhân viên</title>
+</head>
+<body>
+    <h2>Xóa nhân viên</h2>
+    <form action="../Controller/C_Staff.php" method="post">
+        IDNV: <input type="text" name="idnv" value="<?php echo $staff['idnv']; ?>" readonly><br>
+        Họ tên: <input type="text" name="hoten" value="<?php echo $staff['hoten']; ?>" readonly><br>
+        IDPB: <input type="text" name="idpb" value="<?php echo $staff['idpb']; ?>" readonly><br>
+        Địa chỉ: <input type="text" name="diachi" value="<?php echo $staff['diachi']; ?>" readonly><br>
+        <input type="submit" name="delete" value="Xóa">
+    </form>
+
+    <?php
+    if (isset($resultMessage)) {
+        echo "<p>$resultMessage</p>";
+    }
+    ?>
+
+    <br>
+    <p><a href="javascript:history.back()">Back</a></p>
+    <p><a href="main.html">Home page</a></p>
+</body>
+</html>

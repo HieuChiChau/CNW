@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Danh sách nhân viên hiện tại</title>
+</head>
+<body>
+    <h2>Danh sách nhân viên hiện tại</h2>
+    <table border="1">
+        <tr>
+            <th>IDNV</th>
+            <th>Họ tên</th>
+        </tr>
+        <?php foreach ($staff as $staffs): ?>
+            <tr>
+                <td><?php echo $staffs['idnv']; ?></td>
+                <td>
+                    <a href="../Controller/C_Staff.php?mod3=1&stid=<?php echo $staffs['idnv']; ?>">
+                        <?php echo $staffs['hoten']; ?>
+                    </a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+    <br>
+    <p><a href="main.html">Home page</a></p>
+</body>
+</html>
